@@ -1,0 +1,26 @@
+  server:
+    port: 9999
+  spring:
+    application:
+      name: restful-sample-jpa
+    datasource:
+      username: postgres
+      password: seak$
+      url: jdbc:postgresql://localhost:5432/spring-db
+      driver-class-name: org.postgresql.Driver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: true
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+  springdoc:
+    swagger-ui:
+      path: /api-docs
+  file_storage:
+    image_location: "filestorage/images/"
+    client_path: "/images/**"
+    data_location: "filestorage/data"
+

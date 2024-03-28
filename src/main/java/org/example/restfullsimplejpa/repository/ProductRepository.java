@@ -1,2 +1,9 @@
-package org.example.restfullsimplejpa.repository;public class ProductRepository {
+package org.example.restfullsimplejpa.repository;
+
+import org.example.restfullsimplejpa.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }
